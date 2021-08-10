@@ -30,8 +30,8 @@ for artist in artist_repository.select_all():
 #########################################################
 
 # NOT WORKING
-# artist2.name = "Robyn"
-# artist_repository.update(artist2)
+artist2.name = "Robyn"
+artist_repository.update(artist2)
 
 #########################################################
 
@@ -40,10 +40,26 @@ artist_repository.delete(artist1.id)
 
 artist_repository.albums(artist2)
 
+##########################################################
 
-# for album in album_repository.select_all():
-#     print(album.__dict__)
+album1 = Album("Rihanna Album", "Pop", artist2)
+album_repository.save(album1)
 
+for album in album_repository.select_all():
+    print(album.__dict__)
 
+###########################################################
+
+# album_repository.delete_all()
+# artist_repository.delete_all()
+
+############################################################
+
+# album_repository.delete(album1.id)
+
+#############################################################
+
+album1.title = "albumzzzzz"
+album_repository.update(album1)
 
 pdb.set_trace()
