@@ -29,7 +29,6 @@ for artist in artist_repository.select_all():
 
 #########################################################
 
-# NOT WORKING
 artist2.name = "Robyn"
 artist_repository.update(artist2)
 
